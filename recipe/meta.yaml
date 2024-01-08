@@ -1,5 +1,5 @@
 {% set name = "transformations" %}
-{% set version = "2022.9.26" %}
+{% set version = "2024.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/transformations-{{ version }}.tar.gz
-  sha256: 9141233392e768eb224b73059b60f19df748bb69493dfd16db7cac9f6e93a4ba
+  sha256: cc924555c0e5ca0f7305bed277615599762d8f902367771b9c3f58b3dcf1be02
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   skip: true  # [py<38]
 
 requirements:
