@@ -11,19 +11,19 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
   skip: true  # [py<38]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - numpy
     - pip
     - python
     - setuptools >=18.0
   run:
-    - {{ pin_compatible('numpy') }}
     - python
 
 test:
